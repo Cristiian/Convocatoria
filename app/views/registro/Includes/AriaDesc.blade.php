@@ -1,0 +1,1 @@
+<div aria-hidden="true" id="bodyd" name="Adesc">Instrucciones: para desplazarse a traves de la convocatoria, debes usar la tecla tabulador, para aceptar los términos establecidos, puedes presionar la tecla a en cualquier momento, y despues checar la casilla de verificación con la tecla espacio, esto desbloqueará el botón que te permitirá ir al siguiente paso.</div>
