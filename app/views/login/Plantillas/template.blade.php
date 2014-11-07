@@ -1,33 +1,24 @@
 <!doctype html>
 <html>
     <head>
-        @include('Registro.Includes.head')
+        @include('login.Includes.head')
         @section('head')
         @show
 
     </head>
     <body id="body" tabindex="0" aria-describedby="bodyd">
         <div class="container" >
+            
             <nav class="navbar navbar-default">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="{{ URL::to('registro') }}">Inicio</a>
+                    <a class="navbar-brand" href="{{ URL::to('#') }}">UV</a>
                 </div>
-                <ul class="nav navbar-nav ">
-                    <li><a href="{{ URL::to('registro/create') }}">Registrarse</a></li>
-                    <li><a href="{{ URL::to('registro/upload') }}">Subir la foto</a>
-                    <li><a href="{{ URL::to('#') }}">Editar perfil</a>
-                    <li><a href="{{ URL::to('/logout') }}">logout</a>
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ URL::to('#') }}">Registrarse</a></li>
+                    <li><a href="{{ URL::to('#') }}">#</a>
                 </ul>
-
-
-
-
             </nav>
-
-
-
-
-
+            
             <div class="row">
                 <!-- inicio panel izquierdo -->
                 <div class="col-md-2"> <!-- ajustar ancho del panel -->
@@ -49,23 +40,21 @@
                         @show
                     </div>
                 </div>
-
-
+                
+                
                 <!-- fin panel principal -->
 
                 <!-- inicio panel derecho -->
                 <div class="col-md-2"> <!-- ajustar ancho del panel -->
                     <div class="well">
-                        @section('right_bar')
-                        @show
-
+                        @include('Examen.includes.right_bar')
                     </div>
                 </div>
                 <!-- fin panel derecho -->
             </div>
         </div>
         <!-- area de descripciones:  -->
-        @include('Registro.includes.AriaDesc')
+        @include('Examen.includes.AriaDesc')
         @section('AriaDivs')
         @show
         <!-- fin area de descripciones:  -->

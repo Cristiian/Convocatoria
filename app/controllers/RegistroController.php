@@ -9,7 +9,11 @@ class RegistroController extends \BaseController {
      */
     public function index() {
         //mostrará a todos los aspirantes registrados
-        return View::make('Registro.Paginas.index');
+        if (Auth::check()) {
+            return View::make('registro.Paginas.index');
+        } else {
+            return View::make('login.Paginas.index');
+        }
     }
 
     /**
@@ -19,7 +23,11 @@ class RegistroController extends \BaseController {
      */
     public function create() {
         //mostrara una vista desde la que se podrá agregar un aspirante
-        return View::make('Registro.Paginas.create');
+        if (Auth::check()) {
+            return View::make('Registro.Paginas.create');
+        } else {
+            return View::make('login.Paginas.index');
+        }
     }
 
     /**
@@ -62,7 +70,7 @@ class RegistroController extends \BaseController {
         $aspirante->colonia = Input::get('colonia');
         $aspirante->ciudad = Input::get('ciudad');
         $aspirante->estado = Input::get('estado');
-         // */
+        // */
         //$user=new User;
         //$user->login='123';
         //$user->save();
@@ -70,14 +78,14 @@ class RegistroController extends \BaseController {
         echo "user";
         try {
             $aspirante->save();
-            return Redirect::to('registro/create');//*/
+            return Redirect::to('registro/create'); //*/
             echo $aspirante;
         } catch (\Exception $e) {
             echo $e;
         }
         // redirect
-        /*Session::flash('message', 'Successfully created nerd!');
-        return Redirect::to('registro/create');//*/
+        /* Session::flash('message', 'Successfully created nerd!');
+          return Redirect::to('registro/create');// */
         //}
     }
 
@@ -121,4 +129,67 @@ class RegistroController extends \BaseController {
         //
     }
 
+    public function upload() {
+        return View::make('registro.Paginas.photo');
+    }
+
+    public function savePicture() {
+        //$file = Input::file("photo")->getClientOriginalName();//
+        $file=(Input::file('file'));
+
+        /*$dataUpload = array(
+            "picture" => $file//campo foto para validar
+        );*/
+        
+        
+        
+        //$user = User::find(Auth::User()->id);
+        //$user->picture = $file->getFilename();
+        
+        Auth::User()->picture=$file->getClientOriginalName();
+        var_dump($file->getClientMimeType());
+       // echo $file;
+        if (Auth::User()->save()) {
+            echo "true";
+        } else {
+            echo "false";
+        }//*/
+
+        /* $rules = array(
+          'username' => 'required|min:2|max:100',
+          'email' => 'required|email|min:6|max:100|unique:users',
+          'password' => 'required|confirmed|min:6|max:100',
+          'photo' => 'required'
+          ); */
+
+        /* $messages = array(
+          'required' => 'El campo :attribute es obligatorio.',
+          'min' => 'El campo :attribute no puede tener menos de :min carácteres.',
+          'email' => 'El campo :attribute debe ser un email válido.',
+          'max' => 'El campo :attribute no puede tener más de :min carácteres.',
+          'unique' => 'El email ingresado ya está registrado en el blog',
+          'confirmed' => 'Los passwords no coinciden'
+          );
+
+          $validation = Validator::make(Input::all(), $rules, $messages);
+          //si la validación falla redirigimos al formulario de registro con los errores
+          //y con los campos que nos habia llenado el usuario
+          if ($validation->fails()) {
+          return Redirect::to('upload')->withErrors($validation)->withInput();
+          } else {
+          $user = new User(array(
+          "username" => Input::get("username"),
+          "email" => Input::get("email"),
+          "password" => Hash::make(Input::get("password")),
+          "photo" => Input::file("photo")->getClientOriginalName()//nombre original de la foto
+          ));
+          if ($user->save()) {
+          //guardamos la imagen en public/imgs con el nombre original
+          $file->move("imgs", $file->getClientOriginalName());
+          //redirigimos con un mensaje flash
+          return Redirect::to('upload')->with(array('confirm' => 'Te has registrado correctamente.'));
+          } */
+    }
+
+    //}
 }
