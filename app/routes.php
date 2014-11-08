@@ -25,3 +25,7 @@ Route::get('/cons', 'ConvocatoriaController@showConsideraciones');
 Route::get('/registro', 'RegistroController@index');
 Route::get('/registro/create', 'RegistroController@create');
 Route::post('/registro/create', 'RegistroController@store');
+
+Route::get('/login', 'LoginController@index');
+Route::post('/login', 'LoginController@autenticate');
+Route::get('/logout', 'LoginController@logout');

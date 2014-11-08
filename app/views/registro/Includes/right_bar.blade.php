@@ -1,4 +1,4 @@
-<p>
+<p tabindex="10">
     Instrucciones:<br>
-    Para aceptar los términos establecidos, puedes presionar la tecla A cualquier momento
+    En esta sección debes ingresar la información solicitada en cada uno de los campos.
 </p>

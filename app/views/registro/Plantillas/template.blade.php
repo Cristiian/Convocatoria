@@ -8,25 +8,17 @@
     </head>
     <body id="body" tabindex="0" aria-describedby="bodyd">
         <div class="container" >
-            <nav class="navbar navbar-default">
+            <nav class="navbar navbar-default"  >
                 <div class="navbar-header">
                     <a class="navbar-brand" href="{{ URL::to('registro') }}">Inicio</a>
                 </div>
-                <ul class="nav navbar-nav ">
-                    <li><a href="{{ URL::to('registro/create') }}">Registrarse</a></li>
-                    <li><a href="{{ URL::to('registro/upload') }}">Subir la foto</a>
-                    <li><a href="{{ URL::to('#') }}">Editar perfil</a>
-                    <li><a href="{{ URL::to('/logout') }}">logout</a>
+                <ul class="nav navbar-nav " role=presentation>
+                    <li ><a tabindex="1" href="{{ URL::to('registro/create') }}">Registrarse</a></li>
+                    <li><a  tabindex="2"href="{{ URL::to('registro/upload') }}">Subir la foto</a>
+                    <li><a  tabindex="3"href="{{ URL::to('#') }}">Editar perfil</a>
+                    <li><a  tabindex="4"href="{{ URL::to('/logout') }}">logout</a>
                 </ul>
-
-
-
-
             </nav>
-
-
-
-
 
             <div class="row">
                 <!-- inicio panel izquierdo -->
@@ -56,8 +48,8 @@
                 <!-- inicio panel derecho -->
                 <div class="col-md-2"> <!-- ajustar ancho del panel -->
                     <div class="well">
-                        @section('right_bar')
-                        @show
+                        
+                        @include('registro.includes.right_bar')
 
                     </div>
                 </div>

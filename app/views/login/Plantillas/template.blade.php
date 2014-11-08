@@ -47,14 +47,14 @@
                 <!-- inicio panel derecho -->
                 <div class="col-md-2"> <!-- ajustar ancho del panel -->
                     <div class="well">
-                        @include('Examen.includes.right_bar')
+                        @include('Login.includes.right_bar')
                     </div>
                 </div>
                 <!-- fin panel derecho -->
             </div>
         </div>
         <!-- area de descripciones:  -->
-        @include('Examen.includes.AriaDesc')
+        @include('Login.includes.AriaDesc')
         @section('AriaDivs')
         @show
         <!-- fin area de descripciones:  -->
