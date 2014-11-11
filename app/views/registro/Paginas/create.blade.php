@@ -43,23 +43,23 @@
     <h2>Datos de domicilio</h2>
     
     <label for="calle">Calle</label>
-    <input tabindex="17" id="calle" name="calle" class="form-control" type="text">
+    <input tabindex="18" id="calle" name="calle" class="form-control" type="text">
    
     <label for="numero">Número de casa</label>
-    <input id="numero" name="numero" type="number" class="form-control" id="numero_de_casa">
+    <input tabindex="19" id="numero" name="numero" type="number" class="form-control" id="numero_de_casa">
     
     <label for="colonia">Colonia</label>
-    <input id="colonia" name="colonia" class="form-control" type="text">
+    <input tabindex="20"id="colonia" name="colonia" class="form-control" type="text">
     
     <label for="ciudad">Ciudad</label>
-    <input id="ciudad" name="ciudad" class="form-control" type="text">
+    <input tabindex="21" id="ciudad" name="ciudad" class="form-control" type="text">
     
     {{ Form::label('estado', 'Estado') }}
 
     {{ Form::select('estado', array('-1' => 'Selecciona una estado', 
                 '1' => 'Veracruz', 
                 '2' => 'Yucatán', 
-                '3' => 'Etc'), Input::old('carreraCombo'), array('class' => 'form-control')) }}
+                '3' => 'Etc'), Input::old('carreraCombo'), array('class' => 'form-control','tabindex'=>'22')) }}
    
 </div>
 
@@ -69,10 +69,13 @@
 <div class="form-group">
     <h2>Selecciona una carrera</h2>
     {{ Form::label('carrera', 'Carrera') }}
-    {{ Form::select('carrera', array('0' => 'Selecciona una carrera', '1' => 'Informatica', '2' => 'Economía', '3' => 'Estadística'), Input::old('carreraCombo'), array('class' => 'form-control')) }}
+    {{ Form::select('carrera', array('0' => 'Selecciona una carrera', 
+                                    '1' => 'Informatica', 
+                                    '2' => 'Economía', 
+                                    '3' => 'Estadística'), Input::old('carreraCombo'), array('class' => 'form-control','tabindex'=>'23')) }}
 </div>
 
-{{ Form::submit('Registrar', array('class' => 'btn btn-primary btn-lg')) }}
+{{ Form::submit('Registrar', array('class' => 'btn btn-primary btn-lg','tabindex'=>'24')) }}
 
 
 {{ Form::close() }}

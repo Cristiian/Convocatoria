@@ -1,4 +1,4 @@
-@extends('Convocatoria.Plantillas.template')
+@extends('Convocatoria.Plantillas.Index_template')
 
 @section('head')
 <title>Convocatoria de ingreso a la universidad 2015.</title>

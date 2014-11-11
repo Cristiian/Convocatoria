@@ -25,14 +25,17 @@
                 <!-- inicio panel derecho -->
                 <div class="col-md-3"> <!-- ajustar ancho del panel -->
                     <div class="well">
-                        @include('includes.right_bar')
+                        
+                        @include('convocatoria.includes.right_bar')
+                        
+                        
                     </div>
                 </div>
                 <!-- fin panel derecho -->
             </div>
         </div>
         <!-- area de descripciones:  -->
-        @include('includes.AriaDesc')
+        @include('convocatoria.includes.AriaDesc')
         @section('AriaDivs')
         @show
         <!-- fin area de descripciones:  -->

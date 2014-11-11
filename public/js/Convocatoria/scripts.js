@@ -3,13 +3,16 @@ $(document).ready(function () {
     $("#chkb").prop("checked", false);
 
     //$("#body").keypress(function (event) {
-    
+    $("#instrucciones").focus();//focus en checkbox aceptar terminos
     //$(document).prop("")
     $(document).keypress(function (event) {
         var key = event.which;
         console.log("key:" + key);
         if (key == 97) {//letra a
             $("#chkb").focus();//focus en checkbox aceptar terminos
+        }
+        if (key == 122) {//letra a
+            $("#instrucciones").focus();//focus en checkbox aceptar terminos
         }
     });//*/
     //122 letra z

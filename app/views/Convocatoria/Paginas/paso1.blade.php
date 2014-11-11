@@ -5,7 +5,7 @@
 @stop
 
 @section('left_bar')
-<li><a>asda</a></li>
+<li tabindex="51"><a>Página de registro</a></li>
 @stop
 
 @section('panel_principal')
@@ -13,8 +13,8 @@
 <section aria-labelledby="cond">
     <ul style="list-style-type:none" role=presentation>			
         <li>
-            <h1 aria-describedby=" cond sec1" >
-                <div tabindex="1" >
+            <h1 aria-describedby="cond sec1" >
+                <div tabindex="2" >
                     <p >CONDICIONES BÁSICAS:</p>
                 </div>
             </h1>
@@ -22,12 +22,12 @@
 
 
         <li >
-            <div tabindex="2">
+            <div tabindex="3">
                 <p>1. El registro será sólo por Internet y se realizará del 23 de febrero al 23 de marzo de 2014 en el siguiente: </p>
             </div>
         </li>
         <li>
-            <div tabindex="3">
+            <div tabindex="4">
                 <p>2. Sólo los aspirantes a una carrera del Área de Artes podrán solicitar otra. La cual podrá ser de Artes o de otra Área Académica.</p>
             </div>
         </li>
@@ -38,44 +38,44 @@
     <ul style="list-style-type:none" role=presentation>
         <li>
             <h1 aria-describedby=" cond sec2" >
-                <div tabindex="4" >
+                <div tabindex="5" >
                     <p >PARA REGISTRARSE:</p>
                 </div>
             </h1>
         </li>
 
         <li>
-            <div tabindex="5">
+            <div tabindex="6">
                 <p>3. Leer completa esta CONVOCATORIA y aceptar las condiciones.</p>
             </div>
         </li>
 
         <li>
-            <div tabindex="6">
+            <div tabindex="7">
                 <p>4. En la pagina de registro, deberas Ingresar tu CURP y seleccionar una carrera.</p>
             </div>
         </li>
 
         <li>
-            <div tabindex="7">
+            <div tabindex="8">
                 <p>5. Imprimir el Folio UV. Guardar su Folio UV y la Contraseña que registró. Durante todo el proceso es la clave personal de acceso al sistema.</p>
             </div>
         </li>
 
         <li>
-            <div tabindex="8">
+            <div tabindex="9">
                 <p>6. Ingresar datos escolares y personales.</p>
             </div>
         </li>
 
         <li>
-            <div tabindex="9">
+            <div tabindex="10">
                 <p>7. Contestar el cuestionario de contexto.</p>
             </div>
         </li>
 
         <li>
-            <div tabindex="10">
+            <div tabindex="11">
                 <p>8. Imprimir la Orden de Pago.</p>
             </div>
         </li>
@@ -83,7 +83,7 @@
     </ul>
 </section>
 <section aria-labelledby="cond2">
-    <input id="chkb" tabindex="11" type="checkbox" aria-describedby="cond2 chkbd" ><label for="chkb">Ir al paso 2</label><br>
+    <input id="chkb" tabindex="12" type="checkbox" aria-describedby="cond2 chkbd" ><label for="chkb">Ir al paso 2</label><br>
 </section>
 @stop
 

@@ -11,10 +11,12 @@
 |
 */
 
-Route::get('/', function()
+/*Route::get('/', function()
 {
 	return View::make('hello');
-});
+});*/
+
+Route::get('/', 'ConvocatoriaController@showIndex');
 
 Route::get('/paso1', 'ConvocatoriaController@showPaso1');
 Route::get('/paso2', 'ConvocatoriaController@showPaso2');
@@ -29,3 +31,38 @@ Route::post('/registro/create', 'RegistroController@store');
 Route::get('/login', 'LoginController@index');
 Route::post('/login', 'LoginController@autenticate');
 Route::get('/logout', 'LoginController@logout');
+
+Route::get('/preguntas', 'PreguntaController@index');
+Route::get('/preguntas/create', 'PreguntaController@create');
+Route::post('/preguntas/create', 'PreguntaController@store');
+Route::delete('/preguntas/delete/{id}','PreguntaController@destroy');//*/
+
+//Route::get('user/{id}', 'PreguntaController@destroy');//test
+
+Route::delete('pregunta/{id}', [
+  'uses' => 'PreguntaController@destroy',
+  'as' => 'preguntas.destroy'
+]);
+
+Route::get('/preguntas/edit/{id}', 'PreguntaController@edit');
+
+Route::put('/preguntas/edit/{id}', [
+  'uses' => 'PreguntaController@update',
+  'as' => 'pregunta.update'
+]);
+
+//////////////////////////////////////////////////////////////////////////
+
+Route::delete('respuestas/{id}', [
+  'uses' => 'RespuestaController@destroy',
+  'as' => 'respuesta.destroy'
+]);
+
+Route::get('/respuestas/edit/{id}', 'RespuestaController@edit');
+
+Route::put('/Respuestas/edit/{id}', [
+  'uses' => 'RespuestaController@update',
+  'as' => 'respuesta.update'
+]);
+
+

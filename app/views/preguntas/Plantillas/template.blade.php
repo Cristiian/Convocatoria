@@ -1,19 +1,30 @@
 <!doctype html>
 <html>
     <head>
-        @include('Convocatoria.Includes.head')
+        @include('preguntas.Includes.head')
         @section('head')
         @show
 
     </head>
-    <body id="body" > <!--tabindex="0" aria-describedby="bodyd"-->
+    <body id="body" tabindex="0" aria-describedby="bodyd">
         <div class="container" >
+            
+            <nav class="navbar navbar-default">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="{{ URL::to('preguntas') }}">Preguntas</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ URL::to('preguntas/create') }}">Crear una pregunta</a></li>
+                    <li><a href="{{ URL::to('#') }}">XXX</a>
+                </ul>
+            </nav>
+            
             <div class="row">
                 <!-- inicio panel izquierdo -->
                 <div class="col-md-2"> <!-- ajustar ancho del panel -->
                     <div class="well">
-                        <ul class="nav " role="presentation">
-                            <li class="nav-header" tabindex="50">Acceso rápido</li>
+                        <ul class="nav ">
+                            <li class="nav-header">Acceso rápido</li>
                             @section('left_bar')
                             @show
                         </ul>
@@ -36,14 +47,14 @@
                 <!-- inicio panel derecho -->
                 <div class="col-md-2"> <!-- ajustar ancho del panel -->
                     <div class="well">
-                        @include('Convocatoria.includes.right_bar')
+                        @include('preguntas.includes.right_bar')
                     </div>
                 </div>
                 <!-- fin panel derecho -->
             </div>
         </div>
         <!-- area de descripciones:  -->
-        @include('Convocatoria.includes.AriaDesc')
+        @include('preguntas.includes.AriaDesc')
         @section('AriaDivs')
         @show
         <!-- fin area de descripciones:  -->

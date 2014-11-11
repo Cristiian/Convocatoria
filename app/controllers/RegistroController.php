@@ -9,11 +9,11 @@ class RegistroController extends \BaseController {
      */
     public function index() {
         //mostrará a todos los aspirantes registrados
-        if (Auth::check()) {
+        //if (Auth::check()) {
             return View::make('registro.Paginas.index');
-        } else {
-            return View::make('login.Paginas.index');
-        }
+        //} else {
+          //  return View::make('login.Paginas.index');
+        //}
     }
 
     /**
@@ -23,11 +23,11 @@ class RegistroController extends \BaseController {
      */
     public function create() {
         //mostrara una vista desde la que se podrá agregar un aspirante
-        if (Auth::check()) {
+        //if (Auth::check()) {
             return View::make('Registro.Paginas.create');
-        } else {
-            return View::make('login.Paginas.index');
-        }
+        //} else {
+          //  return View::make('login.Paginas.index');
+        //}
     }
 
     /**
